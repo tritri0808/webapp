@@ -1,0 +1,61 @@
+<table class="table table-hover table-bordered"
+						style="table-layout: fixed; word-wrap: break-word; width: 100% !important;">
+						<thead style="background-color: #bce8f1;">
+							<tr>
+								<th>IDHotel</th>
+								<th>Namehotel</th>
+								<th>Namelocal</th>
+								<th>Namecity</th>
+								<th>CountReview</th>
+								<th>Rank</th>
+								<th>Star</th>
+								<th>Description</th>
+								<th>Phone</th>
+								<th>Website</th>
+								<th>Address</th>
+								<th>Email</th>
+								<th>Status</th>
+								<th>quantityRoom</th>
+								<th>cooperation1</th>
+								<th>cooperation2</th>
+								<th>cooperation3</th>
+								<th>cooperation4</th>
+								<th>cooperation5</th>
+								<th>cooperation6</th>
+								<th>Edit</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+						#foreach($emp in $hotelList)
+								<tr>
+									<th style="white-space: normal;">$emp.idhotel</th>
+									<th style="white-space: normal;">$emp.namehotel</th>
+									<th style="white-space: normal;">$emp.namelocal</th>
+									<th style="white-space: normal;">$emp.namecity</th>
+									<th style="white-space: normal;">$emp.countreview</th>
+									<th style="white-space: normal;">$emp.rank</th>
+									<th style="white-space: normal;">$emp.star</th>
+									<th style="white-space: normal;">$emp.description</th>
+									<th style="white-space: normal;">$emp.phone</th>
+									<th style="white-space: normal;">$emp.website</th>
+									<th style="white-space: normal;">$emp.address</th>
+									<th style="white-space: normal;">$emp.email</th>
+									<th style="white-space: normal;">$emp.status</th>
+									<th style="white-space: normal;">$emp.quantityroom</th>
+<th style="white-space: normal;">$emp.cooperation1</th>
+<th style="white-space: normal;">$emp.cooperation2</th>
+<th style="white-space: normal;">$emp.cooperation3</th>
+<th style="white-space: normal;">$emp.cooperation4</th>
+<th style="white-space: normal;">$emp.cooperation5</th>
+									<th style="white-space: normal;">$emp.cooperation6</th>
+
+									<th><a
+										href="editHotel?idhotel=<c:out value='${emp.idhotel}'/>">Edit</a></th>
+									<th><a
+										href="deleteHotel?idhotel=<c:out value='${emp.idhotel}'/>">Delete</a></th>
+								</tr>
+								#end
+							</c:forEach>
+						</tbody>
+					</table>
